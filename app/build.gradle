@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs'
+    id 'com.google.gms.google-services'
 
 }
 /*apply plugin: 'com.google.gms.google-services'*/
@@ -41,47 +42,55 @@ android {
 }
 
 dependencies {
+    def nav_version = "2.5.1"
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
-   /* def lifeCycleExtensionVersion = '1.1.1'
-    def supportVersion = '28.0.0'
-    def retrofitVersion = '2.3.0'
-    def glideVersion = '4.9.0'
-    def rxJavaVersion = '2.1.1'
-    def roomVersion = '2.3.0-beta03'
-    def navVersion = '2.3.4'
-    def preferencesVersion = '1.0.0'
-    apply plugin: "androidx.navigation.safeargs"
 
-    //noinspection GradleCompatible
-    implementation "com.android.support:design:$supportVersion"
 
-    implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
+    /* def lifeCycleExtensionVersion = '1.1.1'
+     def supportVersion = '28.0.0'
+     def retrofitVersion = '2.3.0'
+     def glideVersion = '4.9.0'
+     def rxJavaVersion = '2.1.1'
+     def roomVersion = '2.3.0-beta03'
+     def navVersion = '2.3.4'
+     def preferencesVersion = '1.0.0'
+     apply plugin: "androidx.navigation.safeargs"
 
-    implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.legacy:legacy-support-v4:1.0.0"
-    kapt "androidx.room:room-compiler:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
+     //noinspection GradleCompatible
+     implementation "com.android.support:design:$supportVersion"
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
+     implementation "android.arch.lifecycle:extensions:$lifeCycleExtensionVersion"
 
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+     implementation "androidx.room:room-runtime:$roomVersion"
+     implementation "androidx.legacy:legacy-support-v4:1.0.0"
+     kapt "androidx.room:room-compiler:$roomVersion"
+     implementation "androidx.room:room-ktx:$roomVersion"
+     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
 
-    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
+     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
+     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
 
-    implementation "com.github.bumptech.glide:glide:$glideVersion"
+     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
-    //noinspection GradleCompatible
-    implementation "com.android.support:palette-v7:$supportVersion"
+     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
 
-    implementation "androidx.preference:preference-ktx:$preferencesVersion"*/
+     implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+     //noinspection GradleCompatible
+     implementation "com.android.support:palette-v7:$supportVersion"
+
+     implementation "androidx.preference:preference-ktx:$preferencesVersion"*/
 
 
     implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
     implementation 'androidx.appcompat:appcompat:1.5.0'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
